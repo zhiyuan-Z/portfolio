@@ -25,7 +25,8 @@ export default function Home() {
               Hi, I'm <span className="inline-block"><span className="text-orange">Zhiyuan</span> <span className='text-light-blue'>Zhang!</span></span>
             </h1>
             <h2 className="text-xl font-medium my-2">
-              I find balance between humanity and technology to make delightful designs for people.
+              {/* I find balance between humanity and technology to make delightful designs for people. */}
+              I create delightful products that combine technologies from the user's perspective.
             </h2>
           </div>
           <div className="absolute -top-[15%] -left-[20%] w-1/2 h-1/2 bg-orange rounded-full mix-blend-multiply filter blur-5xl opacity-100 skew-y-12 rotate-[120deg] -z-10"></div>
