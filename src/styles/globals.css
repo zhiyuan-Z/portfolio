@@ -13,7 +13,12 @@
 }
 
 @layer components {
-
+  .button {
+    border: 1px solid #000000;
+    border-radius: 1rem;
+    @apply px-4 py-2;
+    @apply flex flex-row justify-center items-center;
+  }
 }
 
 @layer utilities {

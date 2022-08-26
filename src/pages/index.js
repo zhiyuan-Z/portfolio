@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
 import ProjectListings from '../components/ProjectListings'
 import HidingHeader from '../components/HidingHeader'
 
@@ -19,8 +17,11 @@ export default function Home() {
 
       <main>
         <div className="h-screen w-full px-8 grid grid-cols-12 gap-[24px] justify-items-center content-center relative">
-          <img className="col-start-2 col-end-5 m-auto justify-self-end" src="logo.svg" alt="logo of Zhiyuan Zhang" width="290" height="320"/>
-          <div className="col-start-5 col-end-12 m-auto">
+          {/* <img className="col-start-2 col-end-5 m-auto justify-self-end" src="logo.svg" alt="logo of Zhiyuan Zhang" width="290" height="320"/> */}
+          <div className="col-start-2 col-end-5 justify-self-end self-center">
+            <Image src="/logo.svg" alt="Logo of Zhiyuan Zhang, looks like two letter Z stacked together. One Z is orange, and the other is blue." width="290" height="320" />
+          </div>
+          <div className="col-start-5 col-end-12 ml-16 justify-self-start self-center">
             <h1 className="font-mont text-5xl font-medium my-2">
               Hi, I'm <span className="inline-block"><span className="text-orange">Zhiyuan</span> <span className='text-light-blue'>Zhang!</span></span>
             </h1>
@@ -40,7 +41,7 @@ export default function Home() {
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span> */}
       </footer>
-      
+
     </div>
   )
 }
