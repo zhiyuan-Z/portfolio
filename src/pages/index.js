@@ -22,18 +22,18 @@ export default function Home() {
             <Image src="/logo.svg" alt="Logo of Zhiyuan Zhang, looks like two letter Z stacked together. One Z is orange, and the other is blue." width="290" height="320" />
           </div>
           <div className="col-start-5 col-end-12 ml-16 justify-self-start self-center">
-            <h1 className="font-mont text-5xl font-medium my-2">
+            <h1 className="font-mont text-5xl font-normal my-2">
               Hi, I'm <span className="inline-block"><span className="text-orange">Zhiyuan</span> <span className='text-light-blue'>Zhang!</span></span>
             </h1>
-            <h2 className="text-xl font-medium my-2">
+            <h2 className="text-xl font-normal my-2">
               {/* I find balance between humanity and technology to make delightful designs for people. */}
               I create delightful products that combine technologies from the user's perspective.
             </h2>
           </div>
-          <div className="absolute -top-[15%] -left-[20%] w-1/2 h-1/2 bg-orange rounded-full mix-blend-multiply filter blur-5xl opacity-100 skew-y-12 rotate-[120deg] -z-10"></div>
-          <div className="absolute -bottom-[15%] -right-[15%] w-1/2 h-1/2 bg-light-blue rounded-full mix-blend-multiply filter blur-5xl opacity-100 skew-y-12 rotate-[120deg] -z-10"></div>
+          <div className="absolute -top-[15%] -left-[20%] w-1/2 h-1/2 bg-orange rounded-full mix-blend-multiply filter blur-5xl opacity-100 skew-y-12 rotate-[120deg] -z-50"></div>
+          <div className="absolute -bottom-[15%] -right-[15%] w-1/2 h-1/2 bg-light-blue rounded-full mix-blend-multiply filter blur-5xl opacity-100 skew-y-12 rotate-[120deg] -z-50"></div>
         </div>
-        <ProjectListings />
+        <ProjectListings home/>
       </main>
       <footer className="text-center p-8">
         Designed and Developed by Zhiyuan Zhang

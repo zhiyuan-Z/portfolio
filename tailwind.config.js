@@ -11,8 +11,37 @@ module.exports = {
       desktop: '1200px',
     },
     colors: {
-      orange: '#FCB327',
-      'light-blue': '#74ADDE',
+      // not enough contrast
+      // orange: '#FCB327',
+      // 'light-blue': '#74ADDE',
+
+      // looks okay
+      // orange: '#F9A647',
+      // 'light-blue': '#05348B',
+
+      // yellow not enough contrast
+      // orange: '#FFD301',
+      // 'light-blue': '#535386',
+
+      // yellow could use a little bit more contrast
+      // orange: '#FDB638',
+      // 'light-blue': '#006AD0',
+
+      // nice, a little dark, orange is good
+      // orange: '#DF8C54',
+      // 'light-blue': '#154599',
+      // 'light-orange': '#E5CAB9'
+
+      // the blue is a little darker than the last one,
+      // but the orange is a little brighter, Nice one
+      orange: '#F9A647',
+      'light-blue': '#05348B',
+      'light-orange': '#EDCFAB'
+
+      // blue is lighter than last one
+      // orange: '#E18B2E',
+      // 'light-blue': '#00449B',
+      // 'light-orange': '#EDCFAB'
     },
     
     fontFamily: {
@@ -22,6 +51,11 @@ module.exports = {
     extend: {
       fontSize: {
         xs: ['14px', {lineHeight: '24px', letterSpacing: '-0.03em'}],
+      },
+      fontWeight: {
+        'light': 300,
+        'medium': 500,
+        'bold': 700,
       },
       blur: {
         '5xl': '200px',

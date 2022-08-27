@@ -1,6 +1,7 @@
 import ProjectCard from "./ProjectCard";
 
 export default function ProjectListings(props) {
+  const home = props.home;
   const projects = [
     {
       title: 'CourseCompass',
@@ -41,7 +42,7 @@ export default function ProjectListings(props) {
   );
 
   return (
-    <div className="w-full flex flex-col border-b-4 border-orange" id="design">
+    <div className={`w-full flex flex-col border-b-4 border-orange ${!home ? "mt-[80px]" : ""}`} id="design">
       {projectsToShow}
     </div>
   );
