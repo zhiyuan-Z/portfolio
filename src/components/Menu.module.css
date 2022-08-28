@@ -1,0 +1,53 @@
+.activeUnderline {
+  position: absolute;
+  width: 60%;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 3px;
+  @apply bg-light-blue;
+}
+
+.activeLink {
+  @apply text-light-blue font-medium;
+}
+
+.underlineOverlay {
+  transition: width 0.3s ease-out;
+}
+
+.underlined a {
+  transition: all 0.1s ease-out;
+}
+
+.underlined .underlineOverlay {
+  position: absolute;
+  width: 0%;
+  bottom: -10px;
+  right: 20%;
+  height: 3px;
+  @apply bg-orange;
+}
+
+.underlined:hover a,
+.underlined:focus-within a {
+  @apply text-orange;
+}
+
+.underlined:hover .underlineOverlay,
+.underlined:focus-within .underlineOverlay {
+  width: 60%;
+  left: 20%;
+  right: 0;
+}
+
+@media all and (prefers-reduced-motion:reduce) {
+
+  .underlined a,
+  .underlineOverlay {
+    -webkit-transform: none;
+    transform: none;
+    transition: transform none;
+  }
+}

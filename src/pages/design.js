@@ -1,5 +1,5 @@
 import Head from "next/head";
-import HidingHeader from "../components/HidingHeader";
+import Menu from '../components/Menu'
 import ProjectListings from "../components/ProjectListings";
 
 export default function Design() {
@@ -11,7 +11,7 @@ export default function Design() {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <HidingHeader />
+      <Menu />
 
       <main>
         <ProjectListings />

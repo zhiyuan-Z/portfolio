@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@property --l {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 0%;
-}
-
-@property --r {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 0%;
-}
 
 @layer base {
   html {
@@ -30,24 +19,6 @@
     border-radius: 1rem;
     @apply px-4 py-2;
     @apply flex flex-row justify-center items-center;
-  }
-
-  .active-underline {
-    --l: 0%;
-    --r: 0%;
-    position: absolute;
-    width: 60%;
-    bottom: -10px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    height: 3px;
-    transition: --l 1s, --r 1s;
-    background: linear-gradient(to right, #05348B var(--l), #F9A647 var(--l), #F9A647 var(--r), #05348B var(--r));
-  }
-
-  .active-link {
-    @apply text-light-blue font-medium;
   }
 }
 

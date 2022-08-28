@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import ProjectListings from '../components/ProjectListings'
-import HidingHeader from '../components/HidingHeader'
+import Menu from '../components/Menu'
 
 export default function Home() {
 
@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <HidingHeader />
+      <Menu />
 
       <main>
         <div className="h-screen w-full px-8 grid grid-cols-12 gap-[24px] justify-items-center content-center relative">
