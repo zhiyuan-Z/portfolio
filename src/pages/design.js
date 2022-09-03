@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Menu from '../components/Menu'
+import Navigation from '../components/Navigation'
 import ProjectListings from "../components/ProjectListings";
 
 export default function Design() {
@@ -11,13 +11,13 @@ export default function Design() {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <Menu />
+      <Navigation />
 
       <main>
         <ProjectListings />
       </main>
       <footer className="text-center p-8">
-        Designed and Developed by Zhiyuan Zhang
+        &copy; Designed and developed by Zhiyuan Zhang
         {/* <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span> */}

@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import Link from 'next/link';
 import { useRouter } from "next/router";
-import styles from './Menu.module.css';
+import styles from './Navigation.module.css';
 
-export default function Menu() {
+export default () => {
   const router = useRouter();
   const target = useRef(null);
   const underline = useRef(null);
@@ -63,7 +63,7 @@ export default function Menu() {
             ) : null}
             <div className={styles.underlineOverlay} />
           </li>
-          <li className={`relative basis-32 ${styles.underlined}`} >
+          {/* <li className={`relative basis-32 ${styles.underlined}`} >
             <Link href="/#develop">
               <a className={`px-5 py-2 mx-3 my-4 text-center ${router.asPath == "/develop" ? styles.activeLink : ""}`}>Develop</a>
             </Link>
@@ -71,7 +71,7 @@ export default function Menu() {
               <motion.div className={styles.activeUnderline} ref={underline} layoutId="underline" />
             ) : null}
             <div className={styles.underlineOverlay} />
-          </li>
+          </li> */}
           <li className={`relative basis-32 ${styles.underlined}`} >
             <Link href="/#about">
               <a className={`px-5 py-2 mx-3 my-4 text-center ${router.asPath == "/about" ? styles.activeLink : ""}`}>About</a>
@@ -81,7 +81,7 @@ export default function Menu() {
             ) : null}
             <div className={styles.underlineOverlay} />
           </li>
-          <li className={`relative basis-32 ${styles.underlined}`} >
+          {/* <li className={`relative basis-32 ${styles.underlined}`} >
             <Link href="/#contact">
               <a className={`px-5 py-2 mx-3 my-4 text-center ${router.asPath == "/contact" ? styles.activeLink : ""}`}>Contact</a>
             </Link>
@@ -89,7 +89,7 @@ export default function Menu() {
               <motion.div className={styles.activeUnderline} ref={underline} layoutId="underline" />
             ) : null}
             <div className={styles.underlineOverlay} />
-          </li>
+          </li> */}
           <li>
             <button className="mx-3 my-4 button">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 mr-4">

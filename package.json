@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "framer-motion": "^7.2.1",
+    "lightgallery": "^2.6.0",
     "next": "12.2.4",
+    "pure-react-carousel": "^1.29.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
