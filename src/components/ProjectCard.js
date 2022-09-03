@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default (props) => {
+const ProjectCard = (props) => {
   const {
     title,
     subtitle,
@@ -32,3 +32,5 @@ export default (props) => {
     </div>
   )
 }
+
+export default ProjectCard;

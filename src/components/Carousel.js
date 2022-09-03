@@ -12,7 +12,7 @@ import {
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
-export default ({ images }) => {
+const Carousel = ({ images }) => {
   const thumbnails = [];
 
   return (
@@ -55,3 +55,5 @@ export default ({ images }) => {
     </CarouselProvider>
   )
 };
+
+export default Carousel;

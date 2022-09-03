@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useRouter } from "next/router";
 import styles from './Navigation.module.css';
 
-export default () => {
+const Navigation = () => {
   const router = useRouter();
   const target = useRef(null);
   const underline = useRef(null);
@@ -104,3 +104,5 @@ export default () => {
     </motion.header>
   );
 }
+
+export default Navigation;

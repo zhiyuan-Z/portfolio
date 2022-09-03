@@ -1,8 +1,8 @@
 import List from "../components/List";
 import Carousel from "../components/Carousel";
-import LightGallery from "../components/LightGallery";
+import LightBox from "../components/LightBox";
 
-export default () => {
+const Playground = () => {
   // return <Carousel />;\
   const qoc = [
     {
@@ -18,5 +18,7 @@ export default () => {
       subHtml: '<div>bababba</div>'
     },
   ]
-  return <LightGallery images={qoc}/>;
+  return <LightBox images={qoc}/>;
 }
+
+export default Playground;

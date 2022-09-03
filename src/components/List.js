@@ -1,4 +1,4 @@
-export default ({ heading, ordered, divide, children, className, ...rest }) => {
+const List = ({ heading, ordered, divide, children, className, ...rest }) => {
   const Element = ordered ? 'ol' : 'ul';
 
   return (
@@ -21,3 +21,5 @@ export default ({ heading, ordered, divide, children, className, ...rest }) => {
     </>
   );
 }
+
+export default List;

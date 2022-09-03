@@ -1,6 +1,6 @@
 import ProjectCard from "./ProjectCard";
 
-export default (props) => {
+const ProjectListings = (props) => {
   const home = props.home;
   const projects = [
     {
@@ -48,3 +48,5 @@ export default (props) => {
     </div>
   );
 }
+
+export default ProjectListings;

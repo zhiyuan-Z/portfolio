@@ -4,7 +4,7 @@ import Link from "next/link";
 import Navigation from "../../components/Navigation";
 import Carousel from "../../components/Carousel";
 import List from "../../components/List";
-import LightGallery from "../../components/LightGallery";
+import LightBox from "../../components/LightBox";
 
 export function classes(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -43,7 +43,7 @@ export const ProjectSectionContent = ({ className, as = 'div', ...rest }) => {
   )
 };
 
-export default () => {
+const CourseCompass = () => {
   const title = "CourseCompass";
   const subTitle = "Interaction Design Course Project"
   const description = "I designed a mobile app for students to find their curriculum interest and create course schedules."
@@ -108,7 +108,7 @@ export default () => {
         <div className="my-8 font-normal text-lg">
           <ProjectSectionHeading>The Problem</ProjectSectionHeading>
           <div className="my-2">
-            Every student needs to plan their courses. However, finding the information they need can be hard. It is difficult to know what the courses are actually like and how they can relate to students' careers merely from course statistics and syllabus, not to mention that information is often spreaded across multiple resources.
+            Every student needs to plan their courses. However, finding the information they need can be hard. It is difficult to know what the courses are actually like and how they can relate to students&quot; careers merely from course statistics and syllabus, not to mention that information is often spreaded across multiple resources.
             <br />
             <span className="font-bold"> So, UM students need more efficient ways to make informed decisions on course planning.</span>
           </div>
@@ -150,7 +150,7 @@ export default () => {
             User Interviews
           </ProjectSectionHeading>
           <ProjectSectionContent>
-            To better empathize with my users, I interviewed 5 students from different majors and grades. These interviews uncovered new perspectives and needs that I hadn't realize before. I found out that students use up to <span className="font-bold">5+ resources</span> to plan their courses, and some resources are hard to find. Furthermore, <span className="font-bold">friends' recommendations</span> are a major factor when planning for courses. This could infer possible troubles for students who don't have a lot of connections in their programs, especially for <span className="font-bold">incoming students</span>. Plus, I found that most students care most about what courses would <span className="font-bold">align with their interest</span> and help them <span className="font-bold">progress towards their career</span>. Then, I categorized my key findings based on Maslow's hierarchy of needs.
+            To better empathize with my users, I interviewed 5 students from different majors and grades. These interviews uncovered new perspectives and needs that I hadn&quot;t realize before. I found out that students use up to <span className="font-bold">5+ resources</span> to plan their courses, and some resources are hard to find. Furthermore, <span className="font-bold">friends&quot; recommendations</span> are a major factor when planning for courses. This could infer possible troubles for students who don&quot;t have a lot of connections in their programs, especially for <span className="font-bold">incoming students</span>. Plus, I found that most students care most about what courses would <span className="font-bold">align with their interest</span> and help them <span className="font-bold">progress towards their career</span>. Then, I categorized my key findings based on Maslow&quot;s hierarchy of needs.
           </ProjectSectionContent>
           <ProjectSectionContent>
             <div className="grid gap-x-8 gap-y-2 grid-cols-12 grid-rows-3 my-8">
@@ -227,7 +227,7 @@ export default () => {
               <li className="py-2">The third diagram targets towards the self-fulfillment needs of the users - to find their interests based on the courses they have taken and find courses that align with their interests and career goals.</li>
             </ul>
             {/* <Carousel images={['/coursecompass/cc_qoc_1.png', '/coursecompass/cc_qoc_2.png', '/coursecompass/cc_qoc_3.png']} /> */}
-            <LightGallery images={qoc} />
+            <LightBox images={qoc} />
             <div>
               Based on the results of the QOC diagrams, I selected the <span className="font-bold">interactive schedule builder with holistic course information and explorative fields listings</span> as the first iteration of my design system.
             </div>
@@ -241,12 +241,12 @@ export default () => {
             </div>
             <div className="grid grid-cols-12 gap-[24px] content-center">
               <div className="col-start-1 col-end-8 relative">
-                <LightGallery images={[{ url: '/coursecompass/cc_storyboard.png', subHtml: '<div>Narrative Storyboard</div>' }]} />
+                <LightBox images={[{ url: '/coursecompass/cc_storyboard.png', subHtml: '<div>Narrative Storyboard</div>' }]} />
                 {/* <Image src="/coursecompass/cc_storyboard.png" width="3400" height="2200" /> */}
               </div>
               <div className="col-start-8 col-end-13 flex flex-row items-center">
                 <p>
-                  The purpose of creating scenarios and storyboard at this stage was to develop deeper understanding and details of the context of use and to make sure that my design system aligns with the users' needs and goals. In this process, I clarified the time and location where users would use my product. It also reminded me that incoming students may not be the primary user of this product, because they usually have to take required courses in the first semester.
+                  The purpose of creating scenarios and storyboard at this stage was to develop deeper understanding and details of the context of use and to make sure that my design system aligns with the users&quot; needs and goals. In this process, I clarified the time and location where users would use my product. It also reminded me that incoming students may not be the primary user of this product, because they usually have to take required courses in the first semester.
                 </p>
               </div>
             </div>
@@ -258,12 +258,12 @@ export default () => {
             <div>
               After I created the scenarios and storyboard, I created 4 story maps for each of my persona and a common story map.
             </div>
-            <LightGallery images={[{ url: '/coursecompass/cc_common_storymap.png', subHtml: '<div>Common Path Story Map</div>' }]} />
-            <LightGallery images={storymap} />
+            <LightBox images={[{ url: '/coursecompass/cc_common_storymap.png', subHtml: '<div>Common Path Story Map</div>' }]} />
+            <LightBox images={storymap} />
             <div>
               When I was building the story map, I found that the primary users would use most features and other personas would use different features. The order of the use of each feature is not necessarily in serial, so I chose the order that makes most sense to me when constructing the story map.
             </div>
-            <LightGallery images={[{ url: '/coursecompass/cc_userflow.png', subHtml: '<div>User Flow Diagram based on Common Path Story Map</div>' }]} />
+            <LightBox images={[{ url: '/coursecompass/cc_userflow.png', subHtml: '<div>User Flow Diagram based on Common Path Story Map</div>' }]} />
             <div>
               Because each persona uses different features, and they may use the features in any order, I decided to design a tab bar Application. So, it will be easy for users to navigate to each tool in the application.
             </div>
@@ -279,10 +279,10 @@ export default () => {
                 </p>
               </div>
               <div className="col-start-7 col-end-13 relative">
-                <LightGallery images={[{ url: '/coursecompass/cc_lofi_prototype.png', subHtml: '<div>Low-Fidelity Prototype</div>' }]} />
+                <LightBox images={[{ url: '/coursecompass/cc_lofi_prototype.png', subHtml: '<div>Low-Fidelity Prototype</div>' }]} />
               </div>
               <div className="col-start-1 col-end-7 relative">
-                <LightGallery images={[{ url: '/coursecompass/cc_midfi_prototype.png', subHtml: '<div>Mid-Fidelity Prototype</div>' }]} />
+                <LightBox images={[{ url: '/coursecompass/cc_midfi_prototype.png', subHtml: '<div>Mid-Fidelity Prototype</div>' }]} />
               </div>
               <div className="col-start-7 col-end-13 flex flex-row items-center">
                 <p>
@@ -291,11 +291,11 @@ export default () => {
               </div>
               <div className="col-start-1 col-end-7 flex flex-row items-center">
                 <p>
-                  Now that the mid-fi prototype is more interactive and complete. I did a few usability tests again and get some new feedbacks. Based on the feedback, I evaluated the current design critically and decided to add a few more features. At the same time, I was not satisfied with the UI design, so I read Google's material design guideline, and this was the <span className="font-bold">hi-fi prototype</span> I made.
+                  Now that the mid-fi prototype is more interactive and complete. I did a few usability tests again and get some new feedbacks. Based on the feedback, I evaluated the current design critically and decided to add a few more features. At the same time, I was not satisfied with the UI design, so I read Google&quot;s material design guideline, and this was the <span className="font-bold">hi-fi prototype</span> I made.
                 </p>
               </div>
               <div className="col-start-7 col-end-13 relative">
-                <LightGallery images={[{ url: '/coursecompass/cc_hifi_prototype.png', subHtml: '<div>High-Fidelity Prototype</div>' }]} />
+                <LightBox images={[{ url: '/coursecompass/cc_hifi_prototype.png', subHtml: '<div>High-Fidelity Prototype</div>' }]} />
               </div>
             </div>
           </ProjectSectionContent>
@@ -310,7 +310,7 @@ export default () => {
           <ProjectSectionContent>
             <div className="grid grid-cols-12 gap-[24px] items-center">
               <div className="col-start-1 col-end-5">
-                <LightGallery images={[
+                <LightBox images={[
                   {
                     url: '/coursecompass/cc_courseinfo_1.png',
                     subHtml: '<div>Screen that shows basic information about the course - 1.</div>'
@@ -322,10 +322,10 @@ export default () => {
                 ]} />
               </div>
               <div className="col-start-5 col-end-13">
-                The course information page includes information that students care most beyond basic logistics, such as <span className="font-bold">career outcome, instructor's web page, project showcase, student reviews, etc</span>. This information provides valuable insights on students' development and is hard to obtain elsewhere. Furthermore, the reviews can be filtered to reviews from students with similar backgrounds by machine learning algorithms. Because the same course could be of completely different difficulty <span className="font-bold">to students with different backgrounds</span>.
+                The course information page includes information that students care most beyond basic logistics, such as <span className="font-bold">career outcome, instructor&quot;s web page, project showcase, student reviews, etc</span>. This information provides valuable insights on students&quot; development and is hard to obtain elsewhere. Furthermore, the reviews can be filtered to reviews from students with similar backgrounds by machine learning algorithms. Because the same course could be of completely different difficulty <span className="font-bold">to students with different backgrounds</span>.
               </div>
             </div>
-            <LightGallery images={[
+            <LightBox images={[
               {
                 url: '/coursecompass/cc_courseinfo_3.png',
                 subHtml: '<div>Projects from past semesters uploaded by students who have taken this course.</div>'
@@ -347,12 +347,12 @@ export default () => {
                 <ProjectSectionHeading as='h4'>
                   Interactive Academic Plan
                 </ProjectSectionHeading>
-                This feature is designed to solve students' needs of <span className="font-bold">long-term planning</span> and determine their future paths. The plan shows a sample plan with required and recommended courses initially. Students are allowed to add/remove courses from the plan. The tool provides an easy way for students to plan in advance and find their desired path more easily. Because once they have made a plan, they would know better what their goals are and be more persistent towards their goals.
+                This feature is designed to solve students&quot; needs of <span className="font-bold">long-term planning</span> and determine their future paths. The plan shows a sample plan with required and recommended courses initially. Students are allowed to add/remove courses from the plan. The tool provides an easy way for students to plan in advance and find their desired path more easily. Because once they have made a plan, they would know better what their goals are and be more persistent towards their goals.
                 <br /><br />
                 In addition, the system checks pre-requisites and other enrollment requirements automatically. It also prevents students struggling to meet graduation requirements in their last semesters.
               </div>
               <div className="col-start-10 col-end-13">
-                <LightGallery images={[{
+                <LightBox images={[{
                   url: '/coursecompass/cc_academicplan.png',
                   subHtml: '<div>Interactive academic plan where students can see recommended courses, check course dependencies and plan ahead.</div>'
                 }]} />
@@ -366,7 +366,7 @@ export default () => {
           <ProjectSectionContent>
             <div className="grid grid-cols-12 gap-[24px] items-center">
               <div className="col-start-1 col-end-5">
-                <LightGallery images={[
+                <LightBox images={[
                   {
                     url: '/coursecompass/cc_fieldslistings.png',
                     subHtml: '<div>Course listings classified by fields.</div>'
@@ -394,7 +394,7 @@ export default () => {
                 This feature helps students generate schedules easily by automatically checking enrollment requirements and time conflicts. Students can add sections/courses to the checklist, and the checklist would find a workable schedule for them. If no workable schedule can be found, the system would tell students what courses conflicts. This would be helpful when courses have many sections. To enhance the inclusiveness and usability of the app, the app also allows students to choose their preference, such as class time and instruction mode, for the system to make general <span className="font-bold">more personal</span> schedules.
               </div>
               <div className="col-start-10 col-end-13">
-                <LightGallery images={[{
+                <LightBox images={[{
                   url: '/coursecompass/cc_checklist.png',
                   subHtml: '<div>Course checklist where students can choose their preferences and let the system generates a schedule for them.</div>'
                 }]} />
@@ -419,7 +419,7 @@ export default () => {
             <br /><br />
             One lesson from my needfinding interviews was that not all users are like me. Some students tended to make careful decisions before choosing classes and some just chose randomly. It was also different how each student feels about their interest level of their paths. The needfinding interviews broadened my perspective and made a foundation for my following steps.
             <br /><br />
-            Another lesson I learned was to speak with different people, whether it's about knowing the problem and the users more or about the design itself. I think speaking with other people, learning their perspective and listening to their advice helped me refine my design.
+            Another lesson I learned was to speak with different people, whether it&quot;s about knowing the problem and the users more or about the design itself. I think speaking with other people, learning their perspective and listening to their advice helped me refine my design.
             <br /><br />
             Last but not least, I think it was very helpful to be critical about the design throughout the design process and keep thinking deeply about the goals and needs of users. Sometimes, just rethinking the design features and the goals can give me inspiration.
           </ProjectSectionContent>
@@ -427,9 +427,9 @@ export default () => {
             Challenges
           </ProjectSectionHeading>
           <ProjectSectionContent>
-            One of the biggest challenges was to make my design differentiate from the competitors. There were plenty of resources that were referenced by students. It took me efforts to know what students really needed and what the existing resources couldn't provide.
+            One of the biggest challenges was to make my design differentiate from the competitors. There were plenty of resources that were referenced by students. It took me efforts to know what students really needed and what the existing resources couldn&quot;t provide.
             <br /><br />
-            Another challenge was to discard the bias of myself as a designer and to really listen to the perspectives of different students. Because I was also a student, I always reminded myself to leave my opinions aside and accept users' opinions.
+            Another challenge was to discard the bias of myself as a designer and to really listen to the perspectives of different students. Because I was also a student, I always reminded myself to leave my opinions aside and accept users&quot; opinions.
           </ProjectSectionContent>
           <ProjectSectionHeading as='h4'>
             For Future
@@ -443,7 +443,7 @@ export default () => {
             </Link>
           </div>
           <div className="h-[680px] overflow-hidden">
-            <iframe width="390" height="844" src="https://xd.adobe.com/embed/1aec7bab-48db-4600-b7dd-1fbae5c1b3f6-4fbf/" frameborder="1" className="box-content border-[12px] rounded-[47pt] scale-75 -translate-y-[110px] m-auto" allowfullscreen />
+            <iframe width="390" height="844" src="https://xd.adobe.com/embed/1aec7bab-48db-4600-b7dd-1fbae5c1b3f6-4fbf/" frameBorder="1" className="box-content border-[12px] rounded-[47pt] scale-75 -translate-y-[110px] m-auto" allowFullScreen />
           </div>
         </div>
       </main>
@@ -457,3 +457,5 @@ export default () => {
     </div>
   );
 }
+
+export default CourseCompass;
