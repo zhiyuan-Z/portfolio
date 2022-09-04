@@ -97,7 +97,7 @@ const CourseCompass = () => {
               layout="fill"
               objectFit="cover"
               className="absolute top-0 inset-0 overflow-hidden" />
-            <div className="fixed bg-gradient-to-b from-[#fff]/[.9] to-[#fff] absolute inset-0" />
+            <div className="bg-gradient-to-b from-[#fff]/[.9] to-[#fff] absolute inset-0" />
           </div>
         </div>
         <div className="grid grid-cols-12 gap-x-[24px] gap-y-[16px] mx-auto pt-32">
@@ -108,7 +108,7 @@ const CourseCompass = () => {
         <div className="my-8 font-normal text-lg">
           <ProjectSectionHeading>The Problem</ProjectSectionHeading>
           <div className="my-2">
-            Every student needs to plan their courses. However, finding the information they need can be hard. It is difficult to know what the courses are actually like and how they can relate to students&quot; careers merely from course statistics and syllabus, not to mention that information is often spreaded across multiple resources.
+            Every student needs to plan their courses. However, finding the information they need can be hard. It is difficult to know what the courses are actually like and how they can relate to students&apos; careers merely from course statistics and syllabus, not to mention that information is often spreaded across multiple resources.
             <br />
             <span className="font-bold"> So, UM students need more efficient ways to make informed decisions on course planning.</span>
           </div>
@@ -150,14 +150,14 @@ const CourseCompass = () => {
             User Interviews
           </ProjectSectionHeading>
           <ProjectSectionContent>
-            To better empathize with my users, I interviewed 5 students from different majors and grades. These interviews uncovered new perspectives and needs that I hadn&quot;t realize before. I found out that students use up to <span className="font-bold">5+ resources</span> to plan their courses, and some resources are hard to find. Furthermore, <span className="font-bold">friends&quot; recommendations</span> are a major factor when planning for courses. This could infer possible troubles for students who don&quot;t have a lot of connections in their programs, especially for <span className="font-bold">incoming students</span>. Plus, I found that most students care most about what courses would <span className="font-bold">align with their interest</span> and help them <span className="font-bold">progress towards their career</span>. Then, I categorized my key findings based on Maslow&quot;s hierarchy of needs.
+            To better empathize with my users, I interviewed 5 students from different majors and grades. These interviews uncovered new perspectives and needs that I hadn&apos;t realize before. I found out that students use up to <span className="font-bold">5+ resources</span> to plan their courses, and some resources are hard to find. Furthermore, <span className="font-bold">friends&apos; recommendations</span> are a major factor when planning for courses. This could infer possible troubles for students who don&apos;t have a lot of connections in their programs, especially for <span className="font-bold">incoming students</span>. Plus, I found that most students care most about what courses would <span className="font-bold">align with their interest</span> and help them <span className="font-bold">progress towards their career</span>. Then, I categorized my key findings based on Maslow&apos;s hierarchy of needs.
           </ProjectSectionContent>
           <ProjectSectionContent>
             <div className="grid gap-x-8 gap-y-2 grid-cols-12 grid-rows-3 my-8">
               <div className="col-start-1 col-end-4 font-semibold">Basic</div>
               <div className="col-start-4 col-end-13">
                 <ul>
-                  <li className="my-2">
+                  <li className="mb-2">
                     Students need a platform that <span className="font-bold">integrates course-related information</span>.
                   </li>
                   <li className="my-2">
@@ -168,7 +168,7 @@ const CourseCompass = () => {
               <div className="col-start-1 col-end-4 font-semibold">Psychological</div>
               <div className="col-start-4 col-end-13">
                 <ul>
-                  <li className="my-2">
+                  <li className="mb-2">
                     Students need to hear more for <span className="font-bold">advice from peer or senior advisors</span>.
                   </li>
                   <li className="my-2">
@@ -179,7 +179,7 @@ const CourseCompass = () => {
               <div className="col-start-1 col-end-4 font-semibold">Self-fulfillment</div>
               <div className="col-start-4 col-end-13">
                 <ul>
-                  <li className="my-2">
+                  <li className="mb-2">
                     Students want to know what courses <span className="font-bold">closely related to their interest fields</span>.
                   </li>
                   <li className="my-2">
@@ -246,7 +246,7 @@ const CourseCompass = () => {
               </div>
               <div className="col-start-8 col-end-13 flex flex-row items-center">
                 <p>
-                  The purpose of creating scenarios and storyboard at this stage was to develop deeper understanding and details of the context of use and to make sure that my design system aligns with the users&quot; needs and goals. In this process, I clarified the time and location where users would use my product. It also reminded me that incoming students may not be the primary user of this product, because they usually have to take required courses in the first semester.
+                  The purpose of creating scenarios and storyboard at this stage was to develop deeper understanding and details of the context of use and to make sure that my design system aligns with the users&apos; needs and goals. In this process, I clarified the time and location where users would use my product. It also reminded me that incoming students may not be the primary user of this product, because they usually have to take required courses in the first semester.
                 </p>
               </div>
             </div>
@@ -291,7 +291,7 @@ const CourseCompass = () => {
               </div>
               <div className="col-start-1 col-end-7 flex flex-row items-center">
                 <p>
-                  Now that the mid-fi prototype is more interactive and complete. I did a few usability tests again and get some new feedbacks. Based on the feedback, I evaluated the current design critically and decided to add a few more features. At the same time, I was not satisfied with the UI design, so I read Google&quot;s material design guideline, and this was the <span className="font-bold">hi-fi prototype</span> I made.
+                  Now that the mid-fi prototype is more interactive and complete. I did a few usability tests again and get some new feedbacks. Based on the feedback, I evaluated the current design critically and decided to add a few more features. At the same time, I was not satisfied with the UI design, so I read Google&apos;s material design guideline, and this was the <span className="font-bold">hi-fi prototype</span> I made.
                 </p>
               </div>
               <div className="col-start-7 col-end-13 relative">
@@ -322,7 +322,7 @@ const CourseCompass = () => {
                 ]} />
               </div>
               <div className="col-start-5 col-end-13">
-                The course information page includes information that students care most beyond basic logistics, such as <span className="font-bold">career outcome, instructor&quot;s web page, project showcase, student reviews, etc</span>. This information provides valuable insights on students&quot; development and is hard to obtain elsewhere. Furthermore, the reviews can be filtered to reviews from students with similar backgrounds by machine learning algorithms. Because the same course could be of completely different difficulty <span className="font-bold">to students with different backgrounds</span>.
+                The course information page includes information that students care most beyond basic logistics, such as <span className="font-bold">career outcome, instructor&apos;s web page, project showcase, student reviews, etc</span>. This information provides valuable insights on students&apos; development and is hard to obtain elsewhere. Furthermore, the reviews can be filtered to reviews from students with similar backgrounds by machine learning algorithms. Because the same course could be of completely different difficulty <span className="font-bold">to students with different backgrounds</span>.
               </div>
             </div>
             <LightBox images={[
@@ -347,7 +347,7 @@ const CourseCompass = () => {
                 <ProjectSectionHeading as='h4'>
                   Interactive Academic Plan
                 </ProjectSectionHeading>
-                This feature is designed to solve students&quot; needs of <span className="font-bold">long-term planning</span> and determine their future paths. The plan shows a sample plan with required and recommended courses initially. Students are allowed to add/remove courses from the plan. The tool provides an easy way for students to plan in advance and find their desired path more easily. Because once they have made a plan, they would know better what their goals are and be more persistent towards their goals.
+                This feature is designed to solve students&apos; needs of <span className="font-bold">long-term planning</span> and determine their future paths. The plan shows a sample plan with required and recommended courses initially. Students are allowed to add/remove courses from the plan. The tool provides an easy way for students to plan in advance and find their desired path more easily. Because once they have made a plan, they would know better what their goals are and be more persistent towards their goals.
                 <br /><br />
                 In addition, the system checks pre-requisites and other enrollment requirements automatically. It also prevents students struggling to meet graduation requirements in their last semesters.
               </div>
@@ -419,7 +419,7 @@ const CourseCompass = () => {
             <br /><br />
             One lesson from my needfinding interviews was that not all users are like me. Some students tended to make careful decisions before choosing classes and some just chose randomly. It was also different how each student feels about their interest level of their paths. The needfinding interviews broadened my perspective and made a foundation for my following steps.
             <br /><br />
-            Another lesson I learned was to speak with different people, whether it&quot;s about knowing the problem and the users more or about the design itself. I think speaking with other people, learning their perspective and listening to their advice helped me refine my design.
+            Another lesson I learned was to speak with different people, whether it&apos;s about knowing the problem and the users more or about the design itself. I think speaking with other people, learning their perspective and listening to their advice helped me refine my design.
             <br /><br />
             Last but not least, I think it was very helpful to be critical about the design throughout the design process and keep thinking deeply about the goals and needs of users. Sometimes, just rethinking the design features and the goals can give me inspiration.
           </ProjectSectionContent>
@@ -427,9 +427,9 @@ const CourseCompass = () => {
             Challenges
           </ProjectSectionHeading>
           <ProjectSectionContent>
-            One of the biggest challenges was to make my design differentiate from the competitors. There were plenty of resources that were referenced by students. It took me efforts to know what students really needed and what the existing resources couldn&quot;t provide.
+            One of the biggest challenges was to make my design differentiate from the competitors. There were plenty of resources that were referenced by students. It took me efforts to know what students really needed and what the existing resources couldn&apos;t provide.
             <br /><br />
-            Another challenge was to discard the bias of myself as a designer and to really listen to the perspectives of different students. Because I was also a student, I always reminded myself to leave my opinions aside and accept users&quot; opinions.
+            Another challenge was to discard the bias of myself as a designer and to really listen to the perspectives of different students. Because I was also a student, I always reminded myself to leave my opinions aside and accept users&apos; opinions.
           </ProjectSectionContent>
           <ProjectSectionHeading as='h4'>
             For Future
@@ -438,12 +438,12 @@ const CourseCompass = () => {
             I learned a lot in this project, whether its design thinking or software skills. In the future, I will adopt better prototyping workflow. I will use atomic design methods, such as first creating a component library of basic components, then determining the layout of each screen and refining the visual details at last.
           </ProjectSectionContent>
           <div className="text-light-blue text-3xl font-semibold my-8 hover:underline focus-within:underline">
-            <Link href="https://xd.adobe.com/view/1aec7bab-48db-4600-b7dd-1fbae5c1b3f6-4fbf/">
-              <a>Link to Prototype</a>
+            <Link href="https://xd.adobe.com/view/ac4c30a2-2882-42a6-ab24-c384731c2aa9-f91f/">
+              <a target="_blank">Link to Prototype</a>
             </Link>
           </div>
           <div className="h-[680px] overflow-hidden">
-            <iframe width="390" height="844" src="https://xd.adobe.com/embed/1aec7bab-48db-4600-b7dd-1fbae5c1b3f6-4fbf/" frameBorder="1" className="box-content border-[12px] rounded-[47pt] scale-75 -translate-y-[110px] m-auto" allowFullScreen />
+            <iframe width="390" height="844" src="https://xd.adobe.com/embed/ac4c30a2-2882-42a6-ab24-c384731c2aa9-f91f/" frameBorder="1" className="box-content border-[12px] rounded-[47pt] scale-75 -translate-y-[110px] m-auto" allowFullScreen />
           </div>
         </div>
       </main>

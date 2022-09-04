@@ -54,7 +54,7 @@ const Navigation = () => {
             ) : null}
             <div className={styles.underlineOverlay} />
           </li>
-          <li className={`relative basis-32 ${styles.underlined}`} >
+          {/* <li className={`relative basis-32 ${styles.underlined}`} >
             <Link href="/design" >
               <a className={`px-5 py-2 mx-3 my-4 text-center ${router.asPath == "/design" ? styles.activeLink : ""}`}>Design</a>
             </Link>
@@ -62,7 +62,7 @@ const Navigation = () => {
               <motion.div className={styles.activeUnderline} ref={underline} layoutId="underline" />
             ) : null}
             <div className={styles.underlineOverlay} />
-          </li>
+          </li> */}
           {/* <li className={`relative basis-32 ${styles.underlined}`} >
             <Link href="/#develop">
               <a className={`px-5 py-2 mx-3 my-4 text-center ${router.asPath == "/develop" ? styles.activeLink : ""}`}>Develop</a>
@@ -73,10 +73,10 @@ const Navigation = () => {
             <div className={styles.underlineOverlay} />
           </li> */}
           <li className={`relative basis-32 ${styles.underlined}`} >
-            <Link href="/#about">
+            <Link href="/about">
               <a className={`px-5 py-2 mx-3 my-4 text-center ${router.asPath == "/about" ? styles.activeLink : ""}`}>About</a>
             </Link>
-            {router.asPath == "/#about" ? (
+            {router.asPath == "/about" ? (
               <motion.div className={styles.activeUnderline} ref={underline} layoutId="underline" />
             ) : null}
             <div className={styles.underlineOverlay} />
@@ -95,7 +95,9 @@ const Navigation = () => {
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 mr-4">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
               </svg>
-              <div>Resume</div>
+              <Link href="/ZhiyuanZhang_Resume_815.pdf">
+                <a target="_blank" download>Resume</a>
+              </Link>
             </button>
           </li>
         </ul>
