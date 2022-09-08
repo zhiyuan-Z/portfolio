@@ -13,7 +13,11 @@ import 'lightgallery/css/lg-thumbnail.css';
 const LightBox = ({ images, border, width }) => {
   return (
     <div className={[`my-6 px-2 flex flex-col justify-center items-center mx-auto`]}>
-      <LightGallery mode="lg-fade" plugins={[lgThumbnail, lgZoom]} elementClassNames={`flex flex-row gap-4 w-[${width}]`}>
+      <LightGallery
+        mode="lg-fade"
+        plugins={[lgThumbnail, lgZoom]}
+        elementClassNames={`flex flex-row gap-4 w-[${width}]`}
+        licenseKey="0BB4AF29-8F084112-9BD59D1E-63D2ED15">
         {images?.map((image, index) => (
           <a
             // data-lg-size

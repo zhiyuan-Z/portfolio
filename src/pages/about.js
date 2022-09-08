@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Navigation from '../components/Navigation'
 import myPhoto from '../../public/my_photo.jpg'
+import Footer from '../components/Footer'
 
 export default function About() {
 
@@ -48,12 +49,7 @@ export default function About() {
           <div className="absolute -bottom-[15%] -right-[15%] w-1/2 h-1/2 bg-light-blue rounded-full mix-blend-multiply filter blur-5xl opacity-100 skew-y-12 rotate-[120deg] -z-50"></div>
         </div>
       </main>
-      <footer className="text-center p-8">
-        &copy; Designed and developed by Zhiyuan Zhang
-        {/* <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span> */}
-      </footer>
+      <Footer />
 
     </div>
   )

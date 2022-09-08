@@ -5,6 +5,7 @@ import Navigation from "../../components/Navigation";
 import Carousel from "../../components/Carousel";
 import List from "../../components/List";
 import LightBox from "../../components/LightBox";
+import Footer from "../../components/Footer";
 
 export function classes(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -447,12 +448,7 @@ const CourseCompass = () => {
           </div>
         </div>
       </main>
-      <footer className="text-center p-8">
-        &copy; Designed and developed by Zhiyuan Zhang
-        {/* <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span> */}
-      </footer>
+      <Footer />
 
     </div>
   );

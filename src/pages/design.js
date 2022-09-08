@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Navigation from '../components/Navigation'
 import ProjectListings from "../components/ProjectListings";
+import Footer from '../components/Footer'
 
 export default function Design() {
   return (
@@ -16,12 +17,7 @@ export default function Design() {
       <main>
         <ProjectListings />
       </main>
-      <footer className="text-center p-8">
-        &copy; Designed and developed by Zhiyuan Zhang
-        {/* <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span> */}
-      </footer>
+      <Footer />
 
     </div>
   )
