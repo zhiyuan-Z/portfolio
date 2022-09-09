@@ -11,13 +11,14 @@ const ProjectListings = (props) => {
       image: '/coursecompass/cc_main.png',
       link: '/projects/coursecompass'
     },
-    // {
-    //   title: 'Habby',
-    //   subtitle: 'Mobile App Design',
-    //   description: 'An online community that facilitates habit formation and relationship building through user interactions and gamification.',
-    //   bgColor: 'bg-[#FDF1E4]',
-    //   image: '/DSC_0414.jpg',
-    // },
+    {
+      title: 'Habby',
+      subtitle: 'Mobile App Design',
+      description: 'An online community that facilitates habit formation and relationship building through user interactions and gamification.',
+      bgColor: 'bg-[#FDF1E4]',
+      image: '/habby/hb_main.png',
+      link: '/projects/habby'
+    },
     // {
     //   title: 'LCN Website Redesign',
     //   subtitle: 'Website Redesign / UX Research',

@@ -6,10 +6,8 @@ import Carousel from "../../components/Carousel";
 import List from "../../components/List";
 import LightBox from "../../components/LightBox";
 import Footer from "../../components/Footer";
+import classes from "../../utils/classes";
 
-export function classes(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
 export const ProjectSectionHeading = ({ className, as = 'h3', ...rest }) => {
   const Component = as;
   let fontSize;
@@ -28,7 +26,7 @@ export const ProjectSectionHeading = ({ className, as = 'h3', ...rest }) => {
   }
   return (
     <Component
-      className={classes(className, fontSize, 'font-mont font-semibold text-light-blue mt-10 mb-4')}
+      className={classes(className, fontSize, 'font-mont font-semibold text-blue mt-10 mb-4')}
       {...rest}
     />
   )
@@ -102,9 +100,9 @@ const CourseCompass = () => {
           </div>
         </div>
         <div className="grid grid-cols-12 gap-x-[24px] gap-y-[16px] mx-auto pt-32">
-          <h1 className="col-start-1 col-end-13 font-mont font-semibold text-light-blue text-5xl">{title}</h1>
-          <h2 className="col-start-1 col-end-13 font-mont font-medium text-light-blue text-xl">{subTitle}</h2>
-          <div className="col-start-1 col-end-8 font-normal text-light-blue text-lg">{description}</div>
+          <h1 className="col-start-1 col-end-13 font-mont font-semibold text-blue text-5xl">{title}</h1>
+          <h2 className="col-start-1 col-end-13 font-mont font-medium text-blue text-xl">{subTitle}</h2>
+          <div className="col-start-1 col-end-8 font-normal text-blue text-lg">{description}</div>
         </div>
         <div className="my-8 font-normal text-lg">
           <ProjectSectionHeading>The Problem</ProjectSectionHeading>
@@ -438,7 +436,7 @@ const CourseCompass = () => {
           <ProjectSectionContent>
             I learned a lot in this project, whether its design thinking or software skills. In the future, I will adopt better prototyping workflow. I will use atomic design methods, such as first creating a component library of basic components, then determining the layout of each screen and refining the visual details at last.
           </ProjectSectionContent>
-          <div className="text-light-blue text-3xl font-semibold my-8 hover:underline focus-within:underline">
+          <div className="text-blue text-3xl font-semibold my-8 hover:underline focus-within:underline">
             <Link href="https://xd.adobe.com/view/ac4c30a2-2882-42a6-ab24-c384731c2aa9-f91f/">
               <a target="_blank">Link to Prototype</a>
             </Link>

@@ -6,11 +6,11 @@
   right: 0;
   margin: auto;
   height: 3px;
-  @apply bg-light-blue;
+  @apply bg-blue;
 }
 
 .activeLink {
-  @apply text-light-blue font-medium;
+  @apply text-blue font-medium;
 }
 
 .underlineOverlay {

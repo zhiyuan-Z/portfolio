@@ -19,10 +19,6 @@ module.exports = {
       // orange: '#F9A647',
       // 'light-blue': '#05348B',
 
-      // yellow not enough contrast
-      // orange: '#FFD301',
-      // 'light-blue': '#535386',
-
       // yellow could use a little bit more contrast
       // orange: '#FDB638',
       // 'light-blue': '#006AD0',
@@ -35,13 +31,18 @@ module.exports = {
       // the blue is a little darker than the last one,
       // but the orange is a little brighter, Nice one
       orange: '#F9A647',
-      'light-blue': '#05348B',
-      'light-orange': '#EDCFAB'
+      // 'light-blue': '#05348B', //a little too dark
+      'light-orange': '#EDCFAB',
 
       // blue is lighter than last one
       // orange: '#E18B2E',
-      // 'light-blue': '#00449B',
+      // 'light-blue': '#2a5bb3',
       // 'light-orange': '#EDCFAB'
+      blue: {
+        DEFAULT: '#2a5bb3',
+        light: '#cde5ff',
+        dark: '#001d32',
+      }
     },
     
     fontFamily: {
