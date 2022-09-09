@@ -18,7 +18,7 @@ export default function About() {
       <Navigation />
 
       <main>
-        <div className="h-screen w-full px-8 grid grid-cols-12 gap-[24px] justify-items-center content-center relative">
+        <div className="min-h-screen w-full px-8 grid grid-cols-12 gap-[24px] justify-items-center content-center relative">
           <div className="col-start-2 col-end-5 justify-self-end self-center relative">
             <Image src={myPhoto} alt="Picture of Zhiyuan." width="600px" height="800px" />
           </div>

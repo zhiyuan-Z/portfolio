@@ -3,6 +3,7 @@ import Image from 'next/image'
 import ProjectListings from '../components/ProjectListings'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import logo from '../../public/logo.svg'
 
 export default function Home() {
 
@@ -20,7 +21,7 @@ export default function Home() {
         <div className="h-screen w-full px-8 grid grid-cols-12 gap-[24px] justify-items-center content-center relative">
           {/* <img className="col-start-2 col-end-5 m-auto justify-self-end" src="logo.svg" alt="logo of Zhiyuan Zhang" width="290" height="320"/> */}
           <div className="col-start-2 col-end-5 justify-self-end self-center">
-            <Image src="/logo.svg" alt="Logo of Zhiyuan Zhang, looks like two letter Z stacked together. One Z is orange, and the other is blue." width="290" height="320" />
+            <Image src={logo} alt="Logo of Zhiyuan Zhang, looks like two letter Z stacked together. One Z is orange, and the other is blue." width="290" height="320" />
           </div>
           <div className="col-start-5 col-end-12 ml-16 justify-self-start self-center">
             <h1 className="font-mont text-5xl font-normal my-2">
