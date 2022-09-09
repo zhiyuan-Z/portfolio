@@ -7,6 +7,7 @@ import List from "../../components/List";
 import LightBox from "../../components/LightBox";
 import Footer from "../../components/Footer";
 import classes from "../../utils/classes";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 export const ProjectSectionHeading = ({ className, as = 'h3', ...rest }) => {
   const Component = as;
@@ -77,6 +78,13 @@ const CourseCompass = () => {
     },
   ]
 
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
   return (
     <div className="font-sans relative overflow-hidden">
       <Head>
@@ -85,9 +93,11 @@ const CourseCompass = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
+      <motion.div className="progress-bar" style={{ scaleX }} />
+
       <Navigation />
 
-      <main className="min-h-screen px-8 w-4/5 desktop:w-[1000px] m-auto font-sans">
+      <main className="min-h-screen px-8 w-4/5 desktop:w-[1000px] m-auto font-sans text-blue-dark">
         <div className="h-[1000px] w-screen absolute top-0 left-0 overflow-hidden -z-50">
           <div className="relative w-full h-full">
             <Image

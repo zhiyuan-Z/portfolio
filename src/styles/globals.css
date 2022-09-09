@@ -17,7 +17,18 @@
     transition: all .1s;
     @apply px-4 py-2;
     @apply flex flex-row justify-center items-center;
-    @apply hover:border-orange hover:text-orange hover:bg-light-orange/40
+    @apply hover:border-orange hover:text-orange hover:bg-orange-light/10
+  }
+
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    transform-origin: 0%;
+    z-index: 100;
+    @apply bg-orange;
   }
 }
 
