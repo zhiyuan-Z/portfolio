@@ -7,11 +7,12 @@ const Footer = () => {
   const [entered, setEntered] = useState(false);
 
   return (
-    <footer 
-    className="text-center p-8 flex flex-col items-center justify-center font-sans text-base gap-2"
-    onMouseEnter={() => setEntered(true)}
-    onMouseLeave={() => setEntered(false)}>   
-      <div className="flex gap-2">
+    <footer className="text-center p-8 flex flex-col items-center justify-center font-sans text-base gap-2">
+      <div
+        className="flex gap-2 w-full justify-center items-center"
+        onMouseEnter={() => setEntered(true)}
+        onMouseLeave={() => setEntered(false)}
+      >
         <Link href="https://www.linkedin.com/in/zhiyuan-zhang-umich/">
           <a target="_blank" className="hover:text-[#fff]">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"

@@ -4,18 +4,22 @@ const ProjectListings = (props) => {
   const home = props.home;
   const projects = [
     {
-      title: 'CourseCompass',
-      subtitle: 'Mobile App Design',
+      name: 'CourseCompass',
+      title: 'Informational Academic Guide',
+      subtitle: 'Mobile Design / UI + UX / Interaction',
       description: 'A mobile app for students to find their interest and make course schedules.',
       bgColor: 'bg-[#cfe2f6]',
+      textColor: 'text-blue',
       image: '/coursecompass/cc_main.png',
       link: '/projects/coursecompass'
     },
     {
-      title: 'Habby',
-      subtitle: 'Mobile App Design',
+      name: 'Habby',
+      title: 'Habit Forming Online Community',
+      subtitle: 'Mobile Design / UI + UX / Interaction / Online Community',
       description: 'An online community that facilitates habit formation and relationship building through user interactions and gamification.',
       bgColor: 'bg-[#FDF1E4]',
+      textColor: 'text-orange-dark',
       image: '/habby/hb_main.png',
       link: '/projects/habby'
     },
