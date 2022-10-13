@@ -7,6 +7,7 @@ import List from "../../components/List";
 import LightBox from "../../components/LightBox";
 import Footer from "../../components/Footer";
 import classes from "../../utils/classes";
+import Meta from "../../components/Meta";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 export const ProjectSectionHeading = ({ className, as = 'h3', ...rest }) => {
@@ -45,8 +46,26 @@ export const ProjectSectionContent = ({ className, as = 'div', ...rest }) => {
 
 const CourseCompass = () => {
   const title = "CourseCompass";
-  const subTitle = "Interaction Design Course Project"
-  const description = "I designed a mobile app for students to find their curriculum interest and create course schedules."
+  const subTitle = "Mobile / UI + UX / Interaction"
+  const description = "I designed a mobile app that helps students to find their curriculum interest and create course schedules in my course Interaction Design at University of Michigan."
+  const meta = [
+    {
+      key: 'Team',
+      value: 'Zhiyuan Zhang'
+    },
+    {
+      key: 'My Role',
+      value: 'Problem framing, User research, Ideation, Selection, Prototyping, Usability testing'
+    },
+    {
+      key: 'Duration',
+      value: '3 months'
+    },
+    {
+      key: 'Tools',
+      value: 'Adobe XD, Photoshop, Miro, paper'
+    },
+  ]
 
   const qoc = [
     {
@@ -110,9 +129,14 @@ const CourseCompass = () => {
           </div>
         </div>
         <div className="grid grid-cols-12 gap-x-[24px] gap-y-[16px] mx-auto pt-32">
-          <h1 className="col-start-1 col-end-13 font-mont font-semibold text-blue text-5xl">{title}</h1>
-          <h2 className="col-start-1 col-end-13 font-mont font-medium text-blue text-xl">{subTitle}</h2>
-          <div className="col-start-1 col-end-8 font-normal text-blue text-lg">{description}</div>
+          <div className="col-start-1 col-end-7 text-blue">
+            <h1 className="font-mont font-semibold text-5xl">{title}</h1>
+            <h2 className="font-mont font-medium text-xl py-4">{subTitle}</h2>
+            <div className="font-normal text-lg">{description}</div>
+          </div>
+          <div className="col-start-7 col-end-13">
+            <Meta meta={meta} />
+          </div>
         </div>
         <div className="my-8 font-normal text-lg">
           <ProjectSectionHeading>The Problem</ProjectSectionHeading>

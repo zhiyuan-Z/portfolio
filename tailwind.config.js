@@ -32,6 +32,11 @@ module.exports = {
         DEFAULT: '#2a5bb3',
         // DEFAULT: '#154599',
         dark: '#001944',
+      },
+      outline: {
+        light: '#e1e2ec',
+        DEFAULT: '#757780',
+        dark: '#44464f',
       }
     },
 

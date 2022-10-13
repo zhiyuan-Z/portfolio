@@ -4,6 +4,7 @@ import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import classes from "../../utils/classes";
 import LightBox from "../../components/LightBox";
+import Meta from "../../components/Meta";
 import { motion, useScroll, useSpring } from 'framer-motion';
 
 
@@ -61,8 +62,27 @@ export const ContentWithImage = ({ className, image, height = "400px", imgLeft, 
 
 const Habby = () => {
   const title = "Habby";
-  const subTitle = "Online Communities Course Project"
-  const description = "I designed an online community that helps people stay on track of their habits."
+  const subTitle = "Mobile / UI + UX / Interaction / Online Community"
+  const description = "I designed a mobile app that helps people stay on track of their habits using online communities in my course Online Communities at University of Michigan."
+
+  const meta = [
+    {
+      key: 'Team',
+      value: 'Zhiyuan Zhang, Botao Lu, Xintong Li, Ziqi Li'
+    },
+    {
+      key: 'My Role',
+      value: 'Research, Community Design, Community Interaction Design, UI Design'
+    },
+    {
+      key: 'Duration',
+      value: '1.5 months'
+    },
+    {
+      key: 'Tools',
+      value: 'Figma, paper'
+    },
+  ]
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -74,8 +94,8 @@ const Habby = () => {
   return (
     <div className="font-sans relative overflow-hidden">
       <Head>
-        <title>Zhiyuan Zhang - CourseCompass</title>
-        <meta name="description" content="Interaction Design Course Project - A mobile app design that features " />
+        <title>Zhiyuan Zhang - Habby</title>
+        <meta name="description" content="Online Community Design Project - Mobile app design that helps people form habits using the power of online communities." />
         <link rel="icon" href="/favicon.png" />
       </Head>
 
@@ -95,10 +115,15 @@ const Habby = () => {
             <div className="bg-gradient-to-b from-[#fff]/[.9] to-[#fff] absolute inset-0" />
           </div>
         </div>
-        <div className="grid grid-cols-12 gap-x-[24px] gap-y-[16px] mx-auto pt-32 text-orange-dark px-8 w-4/5 desktop:w-[1000px] m-auto">
-          <h1 className="col-start-1 col-end-13 font-mont font-semibold text-5xl">{title}</h1>
-          <h2 className="col-start-1 col-end-13 font-mont font-medium text-xl">{subTitle}</h2>
-          <div className="col-start-1 col-end-10 font-normal text-lg">{description}</div>
+        <div className="grid grid-cols-12 gap-x-[24px] gap-y-[16px] mx-auto pt-32 px-8 w-4/5 desktop:w-[1000px] m-auto">
+          <div className="col-start-1 col-end-7 text-orange-dark">
+            <h1 className="font-mont font-semibold text-5xl">{title}</h1>
+            <h2 className="font-mont font-medium text-xl py-4">{subTitle}</h2>
+            <div className="font-normal text-lg">{description}</div>
+          </div>
+          <div className="col-start-7 col-end-13" >
+            <Meta meta={meta} />
+          </div>
         </div>
         <div className="my-8 font-normal text-lg relative">
           <ProjectSectionHeading>The Problem</ProjectSectionHeading>
@@ -259,12 +284,12 @@ const Habby = () => {
               Users will go through a series of guided steps when they first use the app. These steps will help them find the right community to join and help them stick to their habits. Allowing new users to join the right communities early not only allows them to learn the main features and usage of Habby faster, but also increases the user stickiness of older users. Usually, the relationship of members within an online community affects the functioning of the community, and an online community with interdependent and cooperative members will have higher user stickiness (Ren et al., 2007).
             </p>
             <div>
-            <LightBox images={[
-              {
-                url: '/habby/hb_onboarding.gif',
-                subHtml: ''
-              }
-            ]} />
+              <LightBox images={[
+                {
+                  url: '/habby/hb_onboarding.gif',
+                  subHtml: ''
+                }
+              ]} />
             </div>
             <p>
               In order to give users more control and flexibility, we allow users to skip the onboarding, but we still encourage them to set their habits and join the communities they are interested in as soon as they enter the app.
