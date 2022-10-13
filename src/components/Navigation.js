@@ -30,9 +30,9 @@ const Navigation = () => {
 
   return (
     <motion.header
-      style={{ background: `rgba(255,255,255,${opacity})`, boxShadow: `0 0px 8px 2px rgba(200,200,200,${opacity})` }}
+      style={{ background: `rgba(255,255,255,${opacity})` }}
       ref={target}
-      className={`fixed w-full z-50`}
+      className='fixed w-full z-50 drop-shadow-sm'
       variants={variants}
       animate={visible ? "visible" : "hidden"}
       transition={{ ease: "easeOut", duration: 0.4 }}

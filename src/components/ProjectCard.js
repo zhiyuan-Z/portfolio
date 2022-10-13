@@ -30,11 +30,11 @@ const ProjectCard = (props) => {
         <Link href={link}>
           <a>
             <motion.div
-              className='bg-[#fff]/20 relative w-full h-full z-30 flex justify-center items-center opacity-0'
+              className='bg-[#fff]/20 relative w-full h-full z-10 flex justify-center items-center opacity-0'
               whileHover={{ opacity: 1 }}
               transition={{ duration: 0.2 }}
             >
-              <p className={classes(textColor, 'font-mont font-semibold text-4xl px-2 py-1 bg-[#fff]')}>
+              <p className={classes(textColor, 'font-mont font-semibold text-4xl px-2 py-1 bg-[#fff] z-20')}>
                 {name}
               </p>
             </motion.div>
