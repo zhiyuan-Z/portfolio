@@ -40,7 +40,7 @@ export default function About() {
               <p className="mb-3">
                 My skills include interaction design, graphic design, web design, accessibility, online community design, AR/VR development, application development and data analysis. I am always open to challenges and learning new things.
               </p>
-              <Link href="/ZhiyuanZhang_Resume_815.pdf">
+              <Link href="/Resume_ZhiyuanZhang_Design.pdf">
                 <a className="text-blue hover:underline focus-within:underline" target="_blank" download>Download Resume</a>
               </Link>
             </div>
