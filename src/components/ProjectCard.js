@@ -21,8 +21,8 @@ const ProjectCard = (props) => {
     <div className={classes(bgColor, maxheight, 'w-full aspect-[12/5] grid grid-cols-12 overflow-hidden justify-items-center relative')}>
       <div className="col-start-1 col-end-6 flex flex-col px-8 laptop:px-20 py-16 max-w-xl justify-center h-full overflow-hidden">
         <div className="mb-2 laptop:mb-4">
-          <h3 className="font-mont font-medium text-4xl">{title}</h3>
-          <h4 className="font-mont font-normal text-xl py-4">{subtitle}</h4>
+          <h3 className="font-heading font-medium text-4xl">{title}</h3>
+          <h4 className="font-heading font-normal text-xl py-4">{subtitle}</h4>
         </div>
         <div className="font-normal text-xl">{description}</div>
       </div>
@@ -34,7 +34,7 @@ const ProjectCard = (props) => {
               whileHover={{ opacity: 1 }}
               transition={{ duration: 0.2 }}
             >
-              <p className={classes(textColor, 'font-mont font-semibold text-4xl px-2 py-1 bg-[#fff] z-20')}>
+              <p className={classes(textColor, 'font-heading font-semibold text-4xl px-2 py-1 bg-[#fff] z-20')}>
                 {name}
               </p>
             </motion.div>

@@ -26,7 +26,7 @@ export const ProjectSectionHeading = ({ className, as = 'h3', ...rest }) => {
   }
   return (
     <Component
-      className={classes(className, fontSize, 'font-mont font-semibold text-orange-dark mt-10 mb-4 px-8 w-4/5 desktop:w-[1000px] m-auto')}
+      className={classes(className, fontSize, 'font-heading font-semibold text-orange-dark mt-10 mb-4 px-8 w-4/5 desktop:w-[1000px] m-auto')}
       {...rest}
     />
   )
@@ -92,7 +92,7 @@ const Habby = () => {
   });
 
   return (
-    <div className="font-sans relative overflow-hidden">
+    <div className="font-body relative overflow-hidden">
       <Head>
         <title>Zhiyuan Zhang - Habby</title>
         <meta name="description" content="Online Community Design Project - Mobile app design that helps people form habits using the power of online communities." />
@@ -103,7 +103,7 @@ const Habby = () => {
 
       <Navigation />
 
-      <main className="min-h-screen font-sans text-orange-darkest">
+      <main className="min-h-screen font-body text-orange-darkest">
         <div className="h-[1000px] w-screen absolute top-0 left-0 overflow-hidden -z-50">
           <div className="relative w-full h-full">
             <Image
@@ -117,8 +117,8 @@ const Habby = () => {
         </div>
         <div className="grid grid-cols-12 gap-x-[24px] gap-y-[16px] mx-auto pt-32 px-8 w-4/5 desktop:w-[1000px] m-auto">
           <div className="col-start-1 col-end-7 text-orange-dark">
-            <h1 className="font-mont font-semibold text-5xl">{title}</h1>
-            <h2 className="font-mont font-medium text-xl py-4">{subTitle}</h2>
+            <h1 className="font-heading font-semibold text-5xl">{title}</h1>
+            <h2 className="font-heading font-medium text-xl py-4">{subTitle}</h2>
             <div className="font-normal text-lg">{description}</div>
           </div>
           <div className="col-start-7 col-end-13" >

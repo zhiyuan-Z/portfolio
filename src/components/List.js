@@ -4,11 +4,11 @@ const List = ({ heading, ordered, divide, children, className, ...rest }) => {
   return (
     <>
       {!!heading && (
-        <div className="font-mont font-medium text-2xl px-4 py-2">
+        <div className="font-heading font-medium text-2xl px-4 py-2">
           {heading}
         </div>
       )}
-      <Element className={`font-sans text-xl ${ divide ? 'divide-y divide-light-orange border-y border-light-orange' : ''}`} {...rest}>
+      <Element className={`font-body text-xl ${ divide ? 'divide-y divide-light-orange border-y border-light-orange' : ''}`} {...rest}>
         {children?.map((item, index) => (
           <li
             className="px-4 py-2"

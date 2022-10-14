@@ -8,7 +8,7 @@ import Footer from '../components/Footer'
 export default function About() {
 
   return (
-    <div className="font-sans relative overflow-hidden">
+    <div className="font-body relative overflow-hidden">
       <Head>
         <title>About - Zhiyuan Zhang</title>
         <meta name="description" content="About Zhiyuan Zhang" />
@@ -23,7 +23,7 @@ export default function About() {
             <Image src={myPhoto} alt="Picture of Zhiyuan." width="600px" height="800px" />
           </div>
           <div className="col-start-5 col-end-12 ml-16 justify-self-start">
-            <h1 className="font-mont text-3xl font-normal mb-4 inline">
+            <h1 className="font-heading text-3xl font-normal mb-4 inline">
               Hi, there!<br />I am <span className="inline-block"><span className="text-orange">Zhiyuan</span> <span className='text-blue'>Zhang</span></span>, a designer and developer.
             </h1>
             <div className="text-xl font-normal my-2">

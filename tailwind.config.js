@@ -41,8 +41,8 @@ module.exports = {
     },
 
     fontFamily: {
-      mont: "'Montserrat', san-serif",
-      sans: "'Open Sans', san-serif",
+      heading: "'Plus Jakarta Sans', san-serif", //Monteserrat, Figtree, Plus Jakarta Sans
+      body: "'Inter', Arial, san-serif",
     },
     extend: {
       fontSize: {

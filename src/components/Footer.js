@@ -7,7 +7,7 @@ const Footer = () => {
   const [entered, setEntered] = useState(false);
 
   return (
-    <footer className="text-center p-8 flex flex-col items-center justify-center font-sans text-base gap-2">
+    <footer className="text-center p-8 flex flex-col items-center justify-center font-body text-base gap-2">
       <div
         className="flex gap-2 w-full justify-center items-center"
         onMouseEnter={() => setEntered(true)}
