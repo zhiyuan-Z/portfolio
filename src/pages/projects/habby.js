@@ -6,9 +6,10 @@ import classes from "../../utils/classes";
 import LightBox from "../../components/LightBox";
 import Meta from "../../components/Meta";
 import { motion, useScroll, useSpring } from 'framer-motion';
+import Link from "next/link";
 
 
-export const ProjectSectionHeading = ({ className, as = 'h3', ...rest }) => {
+export const ProjectSectionHeading = ({ className, as = 'h3', id, ...rest }) => {
   const Component = as;
   let fontSize;
   switch (as) {
@@ -27,6 +28,7 @@ export const ProjectSectionHeading = ({ className, as = 'h3', ...rest }) => {
   return (
     <Component
       className={classes(className, fontSize, 'font-heading font-semibold text-orange-dark mt-10 mb-4 px-8 w-4/5 desktop:w-[1000px] m-auto')}
+      id={id}
       {...rest}
     />
   )
@@ -173,7 +175,7 @@ const Habby = () => {
                 url: '/habby/hb_competitive_analysis.png',
                 subHtml: '<div>Compeitive Analysis</div>'
               }]} />
-              For the complete diagram, see Appendix ?.
+              For the complete diagram, see <a href="#appendix" className="hover:underline">the appendix</a>.
               <div>
                 We analyzed 8 competitors in total. Our major findings are:
                 <ul className="list-disc ml-8">
@@ -308,6 +310,16 @@ const Habby = () => {
               <li>Verduyn, P., Gugushvili, N., Massar, K., Täht, K., & Kross, E. (2020). Social comparison on social networking sites. <span className="italic">Current opinion in psychology, 36</span>, 32-37.</li>
               <li>Meier, A., Gilbert, A., Börner, S., & Possler, D. (2020). Instagram inspiration: How upward comparison on social network sites can contribute to well-being. <span className="italic">Journal of Communication, 70</span>(5), 721-743.</li>
             </ul>
+          </ProjectSectionContent>
+          <ProjectSectionHeading id="appendix">
+            Appendix
+          </ProjectSectionHeading>
+          <ProjectSectionContent>
+            <Link href="https://drive.google.com/file/d/1t1xjgaA75-CO6Tw2iZK8Mj0CUQz1uTxt/view?usp=sharing">
+              <a className="hover:underline" target="_blank">
+                Habby_Design_Report.pdf
+              </a>
+            </Link>
           </ProjectSectionContent>
 
         </div>

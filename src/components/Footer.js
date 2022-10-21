@@ -37,7 +37,7 @@ const Footer = () => {
           </a>
         </Link>
       </div>
-      <div>Built with <Link href="https://nextjs.org/"><a target="_blank">Next.js</a></Link> + <Link href="https://tailwindcss.com/"><a target="_blank">Tailwind CSS</a></Link> + <Link href="https://www.framer.com/motion/"><a target="_blank">Framer Motion</a></Link></div>
+      <div>Built with <Link href="https://nextjs.org/"><a target="_blank" className="hover:underline">Next.js</a></Link> + <Link href="https://tailwindcss.com/"><a target="_blank" className="hover:underline">Tailwind CSS</a></Link> + <Link href="https://www.framer.com/motion/"><a target="_blank" className="hover:underline">Framer Motion</a></Link></div>
     </footer>
   )
 }
