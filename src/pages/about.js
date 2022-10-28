@@ -24,7 +24,7 @@ export default function About() {
           </div>
           <div className="col-start-5 col-end-12 ml-16 justify-self-start">
             <h1 className="font-heading text-3xl font-normal mb-4 inline">
-              Hi, there!<br />I am <span className="inline-block"><span className="text-orange">Zhiyuan</span> <span className='text-blue'>Zhang</span></span>, a designer and developer.
+              Hi, there!<br />I am <span className="inline-block"><span className="text-orange">Zhiyuan</span> <span className='text-blue'>Zhang</span></span>, a designer with an empathetic mind and development skills.
             </h1>
             <div className="text-xl font-normal my-2">
 

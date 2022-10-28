@@ -32,7 +32,7 @@ const Navigation = () => {
     <motion.header
       style={{ background: `rgba(255,255,255,${opacity})` }}
       ref={target}
-      className='fixed w-full z-50 drop-shadow-sm'
+      className='fixed w-full z-50 drop-shadow-sm font-heading'
       variants={variants}
       animate={visible ? "visible" : "hidden"}
       transition={{ ease: "easeOut", duration: 0.4 }}
