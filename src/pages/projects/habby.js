@@ -7,9 +7,10 @@ import LightBox from "../../components/LightBox";
 import Meta from "../../components/Meta";
 import { motion, useScroll, useSpring } from 'framer-motion';
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 
-export const ProjectSectionHeading = ({ className, as = 'h3', id, ...rest }) => {
+export const ProjectSectionHeading = ({ className, as = 'h3', id, innerRef, ...rest }) => {
   const Component = as;
   let fontSize;
   switch (as) {
@@ -29,6 +30,7 @@ export const ProjectSectionHeading = ({ className, as = 'h3', id, ...rest }) => 
     <Component
       className={classes(className, fontSize, 'font-heading font-semibold text-orange-dark mt-10 mb-4 px-8 w-4/5 desktop:w-[1000px] m-auto')}
       id={id}
+      ref={innerRef}
       {...rest}
     />
   )
@@ -59,6 +61,44 @@ export const ContentWithImage = ({ className, image, height = "400px", imgLeft, 
       </div>
     </div>
   );
+}
+
+const SideMenu = ({ refs }) => {
+  // console.log(refs);
+  // for (let refr of refs.current) {
+  //   console.log(refr);
+  // }
+  // console.log(refs.current);
+  // let indexes = [];
+  // console.log(refs);
+  // for (let i in refs.current) {
+  //   let item = refs.current[i];
+  //   let indent;
+  //   switch (item.tagName) {
+  //     case 'H4':
+  //       indent = 'ml-2';
+  //       break;
+  //     case 'H5':
+  //       indent = 'ml-4';
+  //       break;
+  //     default:
+  //       indent = '';
+  //   }
+  //   if (item.tagName != 'H5') {
+  //     indexes.push(<li className={`${indent}`} key={i}>{item.innerText}</li>);
+  //   }
+  // }
+  return (
+    <aside className="fixed font-heading right-0 top-1/2 -translate-y-1/2 w-[220px] ">
+      <ul>
+        {refs.current.flatMap((element, index) => {
+          let tagName = element.tagName;
+          return tagName != 'H5' ? <li className={tagName=='H4' ? 'ml-2' : ''} key={index}>{element.innerText}</li> : [];
+        })}
+        {/* {indexes} */}
+      </ul>
+    </aside>
+  )
 }
 
 
@@ -92,6 +132,14 @@ const Habby = () => {
     damping: 30,
     restDelta: 0.001
   });
+
+  const refs = useRef([]);
+
+  // useEffect(() => {
+  //   // for (let component of refs.current) {
+  //   //   console.log(component.innerText);
+  //   // }
+  // }, [])
 
   return (
     <div className="font-body relative overflow-hidden">
@@ -128,11 +176,11 @@ const Habby = () => {
           </div>
         </div>
         <div className="my-8 font-normal text-lg relative">
-          <ProjectSectionHeading>The Problem</ProjectSectionHeading>
+          <ProjectSectionHeading innerRef={ref => (refs.current.push(ref))}>The Problem</ProjectSectionHeading>
           <ProjectSectionContent>
             Setting and chasing personal goals help people to receive mental fulfillment and self-improvement. However, habituation can be difficult because people may find it hard to maintain the momentum and persistence on their own. So, I designed an online community that helps people stick to their habits.
           </ProjectSectionContent>
-          <ProjectSectionHeading as="h4">
+          <ProjectSectionHeading innerRef={ref => (refs.current.push(ref))} as="h4">
             Persona
           </ProjectSectionHeading>
           <ProjectSectionContent>
@@ -147,10 +195,10 @@ const Habby = () => {
               }
             ]} />
           </ProjectSectionContent>
-          <ProjectSectionHeading>
+          <ProjectSectionHeading innerRef={ref => (refs.current.push(ref))}>
             Process
           </ProjectSectionHeading>
-          <ProjectSectionHeading as='h4'>
+          <ProjectSectionHeading innerRef={ref => (refs.current.push(ref))} as='h4'>
             Preliminary Research
           </ProjectSectionHeading>
           <ProjectSectionContent>
@@ -166,7 +214,7 @@ const Habby = () => {
               Online social comparisons are typically considered as having negative impact on <span className="font-bold">social well-being</span> of users (Verduyn et al.). But researchers also found that online social comparison could also have positive outcomes, such as inspiration (Meier et al., 2020). Researchers concludes that the contents user encounters are the main boundary condition for positive and negative impacts on social well-being. Furthermore, results imply that <span className="font-bold">benign envy responses from social comparison can motivate users to keep up with their peers</span> (Meier et al., 2020).
             </p>
           </ProjectSectionContent>
-          <ProjectSectionHeading as="h4">
+          <ProjectSectionHeading innerRef={ref => (refs.current.push(ref))} as="h4">
             Competitive Analysis
           </ProjectSectionHeading>
           <ProjectSectionContent>
@@ -189,10 +237,10 @@ const Habby = () => {
               Based on the competitive analysis and our preliminary research, we decided to build a habit formation app that has basic features for tracking habits with a focus on online communities.
             </p>
           </ProjectSectionContent>
-          <ProjectSectionHeading>
+          <ProjectSectionHeading innerRef={ref => (refs.current.push(ref))}>
             Final Design
           </ProjectSectionHeading>
-          <ProjectSectionHeading as="h4">
+          <ProjectSectionHeading innerRef={ref => (refs.current.push(ref))} as="h4">
             Habit Communities
           </ProjectSectionHeading>
           <ProjectSectionContent>
@@ -213,10 +261,10 @@ const Habby = () => {
               </p>
             </ContentWithImage>
           </ProjectSectionContent>
-          <ProjectSectionHeading as="h4">
+          <ProjectSectionHeading innerRef={ref => (refs.current.push(ref))} as="h4">
             Community Interaction
           </ProjectSectionHeading>
-          <ProjectSectionHeading as="h5">
+          <ProjectSectionHeading innerRef={ref => (refs.current.push(ref))} as="h5">
             Post
           </ProjectSectionHeading>
           <ProjectSectionContent>
@@ -232,7 +280,7 @@ const Habby = () => {
               </p>
             </ContentWithImage>
           </ProjectSectionContent>
-          <ProjectSectionHeading as="h5">
+          <ProjectSectionHeading innerRef={ref => (refs.current.push(ref))} as="h5">
             Like and Comment
           </ProjectSectionHeading>
           <ProjectSectionContent>
@@ -242,7 +290,7 @@ const Habby = () => {
               </p>
             </ContentWithImage>
           </ProjectSectionContent>
-          <ProjectSectionHeading as="h4">
+          <ProjectSectionHeading innerRef={ref => (refs.current.push(ref))} as="h4">
             Profile/Gamification
           </ProjectSectionHeading>
           <ProjectSectionContent>
@@ -252,7 +300,7 @@ const Habby = () => {
               </p>
             </ContentWithImage>
           </ProjectSectionContent>
-          <ProjectSectionHeading as="h5">
+          <ProjectSectionHeading innerRef={ref => (refs.current.push(ref))} as="h5">
             History & Badges
           </ProjectSectionHeading>
           <ProjectSectionContent>
@@ -268,7 +316,7 @@ const Habby = () => {
               </div>
             </ContentWithImage>
           </ProjectSectionContent>
-          <ProjectSectionHeading as="h5">
+          <ProjectSectionHeading innerRef={ref => (refs.current.push(ref))} as="h5">
             Changing Outfit
           </ProjectSectionHeading>
           <ProjectSectionContent>
@@ -278,7 +326,7 @@ const Habby = () => {
               </p>
             </ContentWithImage>
           </ProjectSectionContent>
-          <ProjectSectionHeading as="h4">
+          <ProjectSectionHeading innerRef={ref => (refs.current.push(ref))} as="h4">
             Onboarding
           </ProjectSectionHeading>
           <ProjectSectionContent>
@@ -297,10 +345,7 @@ const Habby = () => {
               In order to give users more control and flexibility, we allow users to skip the onboarding, but we still encourage them to set their habits and join the communities they are interested in as soon as they enter the app.
             </p>
           </ProjectSectionContent>
-
-
-
-          <ProjectSectionHeading>
+          <ProjectSectionHeading innerRef={ref => (refs.current.push(ref))}>
             Reference
           </ProjectSectionHeading>
           <ProjectSectionContent>
@@ -311,7 +356,7 @@ const Habby = () => {
               <li>Meier, A., Gilbert, A., Börner, S., & Possler, D. (2020). Instagram inspiration: How upward comparison on social network sites can contribute to well-being. <span className="italic">Journal of Communication, 70</span>(5), 721-743.</li>
             </ul>
           </ProjectSectionContent>
-          <ProjectSectionHeading id="appendix">
+          <ProjectSectionHeading innerRef={ref => (refs.current.push(ref))} id="appendix">
             Appendix
           </ProjectSectionHeading>
           <ProjectSectionContent>
@@ -321,7 +366,7 @@ const Habby = () => {
               </a>
             </Link>
           </ProjectSectionContent>
-
+          <SideMenu refs={refs} />
         </div>
       </main>
       <Footer />
