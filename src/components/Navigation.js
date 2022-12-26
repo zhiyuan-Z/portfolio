@@ -32,7 +32,7 @@ const Navigation = () => {
     <motion.header
       style={{ background: `rgba(255,255,255,${opacity})` }}
       ref={target}
-      className='fixed w-full z-50 drop-shadow-sm font-heading'
+      className='fixed w-screen z-50 drop-shadow-sm font-heading'
       variants={variants}
       animate={visible ? "visible" : "hidden"}
       transition={{ ease: "easeOut", duration: 0.4 }}
@@ -44,7 +44,7 @@ const Navigation = () => {
         animate={visible ? "visible" : "hidden"}
         transition={{ ease: "easeOut", duration: 0.4 }}
       >
-        <ul className={`px-6 flex fle4-row justify-end items-center right-0 text-xl font-normal z-50`}>
+        <ul className={`px-6 flex fle4-row justify-end items-center right-0 text-xl text-outline-dark font-medium z-50`}>
           <li className={`relative basis-32 ${styles.underlined}`} >
             <Link href="/">
               <a className={`px-5 py-2 mx-3 my-4 text-center ${router.asPath == "/" ? styles.activeLink : ""}`}>Home</a>

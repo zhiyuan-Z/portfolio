@@ -15,34 +15,64 @@ const ProjectCard = (props) => {
     link
   } = props.project;
 
-  const maxheight = 'max-h-[600px]';
+  const height = 'h-[24rem]';
+
+  const coverVariants = {
+    rest: { opacity: 0 },
+    hover: {
+      opacity: 1,
+      transition: {
+        duration: 0.2,
+        ease: 'easeOut'
+      }
+    }
+  }
+
+  const textVariants = {
+    rest: { textDecoration: 'none', duration: 0.2 },
+    hover: {
+      textDecoration: 'underline',
+      transition: {
+        duration: 0.2,
+        ease: 'easeOut'
+      }
+    }
+  }
 
   return (
-    <div className={classes(bgColor, maxheight, 'w-full aspect-[12/5] grid grid-cols-12 overflow-hidden justify-items-center relative')}>
-      <div className="col-start-1 col-end-6 flex flex-col px-8 laptop:px-20 py-16 max-w-xl justify-center h-full overflow-hidden">
-        <div className="mb-2 laptop:mb-4">
-          <h3 className="font-heading font-medium text-4xl">{title}</h3>
-          <h4 className="font-heading font-normal text-xl py-4">{subtitle}</h4>
-        </div>
-        <div className="font-normal text-xl">{description}</div>
-      </div>
-      <div className="col-start-6 col-end-13 relative w-full">
-        <Link href={link}>
-          <a>
+    // <div className={classes(bgColor, height, 'w-full aspect-[12/5] grid grid-cols-12 overflow-hidden justify-items-center relative')}>
+    <Link href={link}>
+      <a>
+        <motion.div
+          className={classes('flex flex-col w-[32rem] relative')}
+          initial="rest"
+          whileHover="hover"
+          animate="rest"
+        >
+          <div className="relative w-[32rem] h-[24rem]">
             <motion.div
-              className='bg-[#fff]/20 relative w-full h-full z-10 flex justify-center items-center opacity-0'
-              whileHover={{ opacity: 1 }}
-              transition={{ duration: 0.2 }}
+              className='bg-[#fff]/20 relative w-full h-full flex z-20 justify-center items-center opacity-0 rounded-[2rem]'
+              variants={coverVariants}
             >
               <p className={classes(textColor, 'font-heading font-semibold text-4xl px-2 py-1 bg-[#fff] z-20')}>
                 {name}
               </p>
             </motion.div>
-            <Image src={image} alt={title + subtitle} className='object-cover object-center' layout="fill" objectFit="cover" />
-          </a>
-        </Link>
-      </div>
-    </div>
+            <Image src={image} alt={title + subtitle} className='w-[32rem] h-[24rem] object-cover object-center rounded-[2rem]' layout="fill" objectFit="cover" />
+          </div>
+          <div className="flex flex-col py-8 justify-center overflow-hidden">
+            <motion.div
+              className="mb-2 laptop:mb-4"
+              variants={textVariants}
+            >
+              <motion.h3 className="font-heading font-medium text-3xl">{title}</motion.h3>
+              <motion.h4 className="font-heading font-normal text-xl py-4">{subtitle}</motion.h4>
+            </motion.div>
+            {/* <div className="font-normal text-xl">{description}</div> */}
+          </div>
+        </motion.div>
+      </a>
+    </Link>
   )
 }
 

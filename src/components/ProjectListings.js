@@ -1,7 +1,8 @@
 import ProjectCard from "./ProjectCard";
+import classes from "../utils/classes";
 
 const ProjectListings = (props) => {
-  const home = props.home;
+  const {home, className} = props;
   const projects = [
     {
       name: 'CourseCompass',
@@ -48,7 +49,8 @@ const ProjectListings = (props) => {
   );
 
   return (
-    <div className={`w-full flex flex-col border-b-4 border-orange ${!home ? "mt-[80px]" : ""}`} id="design">
+    // <div className={`w-full flex flex-col border-b-4 border-orange ${!home ? "mt-[80px]" : ""}`} id="design">
+    <div className={classes(className, `w-full m-auto flex flex-row flex-wrap justify-evenly ${!home ? "mt-[80px]" : ""}`)} id="design">
       {projectsToShow}
     </div>
   );

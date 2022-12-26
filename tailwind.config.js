@@ -34,9 +34,13 @@ module.exports = {
         dark: '#001944',
       },
       outline: {
-        light: '#e1e2ec',
-        DEFAULT: '#757780',
-        dark: '#44464f',
+        // light: '#e1e2ec',
+        // DEFAULT: '#757780',
+        // dark: '#44464f',
+        light: '#d1d5db',
+        DEFAULT: '#334155',
+        dark: '#1e293b',
+        darkest: '#0f172a'
       }
     },
 

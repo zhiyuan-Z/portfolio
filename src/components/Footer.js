@@ -2,12 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../../public/logo.svg"
 import { useState } from "react";
+import classes from "../utils/classes";
 
-const Footer = () => {
+const Footer = (props) => {
+  const { className } = props;
   const [entered, setEntered] = useState(false);
 
   return (
-    <footer className="text-center p-8 flex flex-col items-center justify-center font-body text-base gap-2">
+    <footer className={classes(className, "text-center p-8 flex flex-col items-center justify-center font-body text-base gap-2 bg-[#fff]")}>
       <div
         className="flex gap-2 w-full justify-center items-center"
         onMouseEnter={() => setEntered(true)}
