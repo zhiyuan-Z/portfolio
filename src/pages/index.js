@@ -58,12 +58,12 @@ export default function Home() {
 
       <main className='scroll'>
         <div className='h-screen relative snap-y snap-mandatory overflow-y-auto overflow-x-hidden scroll-smooth'>
-          <div ref={homeRef} className="snap-start h-screen w-full px-8 grid grid-cols-12 gap-[24px] justify-items-center content-center relative">
+          <div ref={homeRef} className="snap-start h-screen w-full px-8 grid tablet:grid-cols-12 tablet:gap-[24px] justify-items-center content-center relative">
             {/* <img className="col-start-2 col-end-5 m-auto justify-self-end" src="logo.svg" alt="logo of Zhiyuan Zhang" width="290" height="320"/> */}
-            <div className="col-start-2 col-end-5 justify-self-end self-center">
+            <div className="hidden tablet:block tablet:col-start-2 tablet:col-end-5 justify-self-end self-center">
               <Image src={logo} alt="Logo of Zhiyuan Zhang, looks like two letter Z stacked together. One Z is orange, and the other is blue." width="290" height="320" />
             </div>
-            <div className="col-start-5 col-end-11 ml-16 justify-self-start self-center flex flex-col gap-4">
+            <div className="col-start-0 tablet:col-start-5 tablet:col-end-11 tablet:ml-16 justify-self-start self-center flex flex-col gap-4">
               <h1 className="font-heading text-6xl font-normal my-2">
                 Hi, I&apos;m <span className="inline-block"><span className="text-orange">Zhiyuan</span> <span className='text-blue'>Zhang!</span></span>
               </h1>
@@ -71,9 +71,9 @@ export default function Home() {
                 I am passionate about bringing technology and humanism together to create elegant and enjoyable products.
               </h2>
             </div>
-            <div className='absolute bottom-16 flex flex-col items-center gap-2 cursor-pointer'>
+            <div className='absolute bottom-8 tablet:bottom-[5%] flex flex-col items-center gap-2 cursor-pointer'>
               <div onClick={() => workRef.current.scrollIntoView()}><ScrollingMouse /></div>
-              <div className='font-heading text-xl font-semibold text-outline'>Scroll Down</div>
+              <div className='hidden laptop:block font-heading text-xl font-semibold text-outline'>Scroll</div>
             </div>
             <div className="absolute -top-[15%] -left-[20%] w-1/2 h-1/2 bg-orange rounded-full mix-blend-multiply filter blur-5xl opacity-100 skew-y-12 rotate-[120deg] -z-50"></div>
             <div className="absolute -bottom-[15%] -right-[15%] w-1/2 h-1/2 bg-blue rounded-full mix-blend-multiply filter blur-5xl opacity-100 skew-y-12 rotate-[120deg] -z-50"></div>

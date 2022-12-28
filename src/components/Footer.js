@@ -9,7 +9,7 @@ const Footer = (props) => {
   const [entered, setEntered] = useState(false);
 
   return (
-    <footer className={classes(className, "text-center p-8 flex flex-col items-center justify-center font-body text-base gap-2 bg-[#fff]")}>
+    <footer className={classes(className, "text-center p-8 flex flex-col items-center justify-center font-body text-base gap-2")}>
       <div
         className="flex gap-2 w-full justify-center items-center"
         onMouseEnter={() => setEntered(true)}

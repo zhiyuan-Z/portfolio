@@ -40,6 +40,8 @@ const Playground = () => {
   //   },
   // ]
   // return <LightBox images={qoc}/>;
+
+
   const [on, setOn] = useState(false);
   const { scrollY } = useScroll();
   useEffect(() => {
@@ -53,12 +55,15 @@ const Playground = () => {
       }
     })
   })
+
   return (
     // <div className="bg-orange-light ">
     //   <div className="w-[1000px] m-auto">
     //   <Meta meta={meta}/>
     //   </div>
     //   </div>
+
+
     <>
       <div className="h-screen">
         <div
@@ -84,6 +89,8 @@ const Playground = () => {
       </div>
       <div className="h-screen"></div>
     </>
+
+
   );
 }
 

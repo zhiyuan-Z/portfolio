@@ -44,23 +44,23 @@ const ProjectCard = (props) => {
     <Link href={link}>
       <a>
         <motion.div
-          className={classes('flex flex-col w-[32rem] relative')}
+          className={classes('flex flex-col w-full tablet:w-[32rem] relative')}
           initial="rest"
           whileHover="hover"
           animate="rest"
         >
-          <div className="relative w-[32rem] h-[24rem]">
+          <div className="relative w-full tablet:w-[32rem] h-[24rem]">
             <motion.div
-              className='bg-[#fff]/20 relative w-full h-full flex z-20 justify-center items-center opacity-0 rounded-[2rem]'
+              className='bg-[#fff]/20 relative w-full h-full flex z-20 justify-center items-center opacity-0 tablet:rounded-[2rem]'
               variants={coverVariants}
             >
               <p className={classes(textColor, 'font-heading font-semibold text-4xl px-2 py-1 bg-[#fff] z-20')}>
                 {name}
               </p>
             </motion.div>
-            <Image src={image} alt={title + subtitle} className='w-[32rem] h-[24rem] object-cover object-center rounded-[2rem]' layout="fill" objectFit="cover" />
+            <Image src={image} alt={title + subtitle} className='w-full tablet:w-[32rem] h-[24rem] object-cover object-center tablet:rounded-[2rem]' layout="fill" objectFit="cover" />
           </div>
-          <div className="flex flex-col py-8 justify-center overflow-hidden">
+          <div className="flex flex-col my-4 px-8 tablet:px-4 tablet:py-8 justify-center overflow-hidden">
             <motion.div
               className="mb-2 laptop:mb-4"
               variants={textVariants}
