@@ -18,7 +18,7 @@ const ProjectCard = (props) => {
   const height = 'h-[24rem]';
 
   const coverVariants = {
-    rest: { opacity: 0 },
+    rest: { y: 0, opacity: 0 },
     hover: {
       opacity: 1,
       transition: {
@@ -29,15 +29,40 @@ const ProjectCard = (props) => {
   }
 
   const textVariants = {
-    rest: { textDecoration: 'none', duration: 0.2 },
+    offscreen: {
+      y: "25%",
+      opcity: 0,
+    },
+    rest: {
+      y: 0,
+      opcity: 1,
+      textDecoration: 'none',
+      transition: {
+        duration: 0.8
+      }
+    },
     hover: {
       textDecoration: 'underline',
       transition: {
         duration: 0.2,
         ease: 'easeOut'
       }
-    }
+    },
   }
+
+  const cardVariants = {
+    offscreen: {
+      y: 5,
+      opacity: 0
+    },
+    rest: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6
+      }
+    }
+  };
 
   return (
     // <div className={classes(bgColor, height, 'w-full aspect-[12/5] grid grid-cols-12 overflow-hidden justify-items-center relative')}>
@@ -45,11 +70,13 @@ const ProjectCard = (props) => {
       <a>
         <motion.div
           className={classes('flex flex-col w-full tablet:w-[32rem] relative')}
-          initial="rest"
+          initial="offscreen"
+          whileInView="rest"
           whileHover="hover"
-          animate="rest"
+          // viewport={{ once: true }}
         >
-          <div className="relative w-full tablet:w-[32rem] h-[24rem]">
+          <motion.div className="relative w-full tablet:w-[32rem] h-[24rem]"
+            variants={cardVariants}>
             <motion.div
               className='bg-[#fff]/20 relative w-full h-full flex z-20 justify-center items-center opacity-0 tablet:rounded-[2rem]'
               variants={coverVariants}
@@ -59,7 +86,7 @@ const ProjectCard = (props) => {
               </p>
             </motion.div>
             <Image src={image} alt={title + subtitle} className='w-full tablet:w-[32rem] h-[24rem] object-cover object-center tablet:rounded-[2rem]' layout="fill" objectFit="cover" />
-          </div>
+          </motion.div>
           <div className="flex flex-col my-4 px-8 tablet:px-4 tablet:py-8 justify-center overflow-hidden">
             <motion.div
               className="mb-2 laptop:mb-4"
